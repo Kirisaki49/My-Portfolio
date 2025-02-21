@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/skills.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <link rel="stylesheet" href="{% static 'css/education.css' %}">
+
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Habib</a></div>
+            <ul class="links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <li><a href="#home">Home</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="content">
+            <div class="text">
+                <h4>Hello,</h4>
+                <h1 class="nama">Saya Mhd. Abdul Habib Ali</h1>
+                <p>Lulusan Manajemen Universitas Andalas yang memiliki pengalaman di bidang keuangan dan manajemen.</p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="card">
+                <div class="front-page">
+                    <div class="card-info">
+                        <h2 class="card-title"></h2>
+                        <p class="card-subtitle"></p>
+                    </div>
+                </div>
+                <div class="back-page">
+                    <div class="card-content">
+                        <h3>Mhd. Abdul Habib ali</h3>
+                        <p class="card-description">Lulusan Manajemen Universitas Andalas</p>
+                        <button class="card-button">Explore more</button>
+                    </div>
+                </div>
+            <div>
+        <div>
+    </section>
+
+    <section id="service">
+        <h1>Service</h1>
+        <p>My service include...</p>
+    </section>
+
+    <section id="skills" class="skills">
+        <h1>Skills</h1>
+        <div class="kotak">
+            <div class="kotak1">
+                <div class="dropdown">Soft Skills
+                    <span class="left-icon"></span>
+                    <span class="right-icon"></span>
+                    <div class="items">
+                        <a href="#" style="--i:1;"><span></span>Comunication</a>
+                        <a href="#" style="--i:2;"><span></span>Teamwork</a>
+                        <a href="#" style="--i:3;"><span></span>Problem Solving</a>
+                        <a href="#" style="--i:4;"><span></span>Time Management</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="kotak2">
+                <div class="dropdown">Hard Skills
+                    <span class="left-icon"></span>
+                    <span class="right-icon"></span>
+                    <div class="items">
+                        <a href="#" style="--i:1;"><span></span>Ms. Word</a>
+                        <a href="#" style="--i:2;"><span></span>Ms. Excel</a>
+                        <a href="#" style="--i:3;"><span></span>Ms. PowerPoint</a>
+                        <a href="#" style="--i:4;"><span></span>HTML & CSS</a>
+                        <a href="#" style="--i:5;"><span></span>JavaScript</a>
+                        <a href="#" style="--i:6;"><span></span>Python</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="education" class="education">
+        <h1>Education</h1>
+        <div class="education-container">
+            <div class="box">
+                <div class="box1">
+                    <h2 class="pendidikan1">Universitas Andalas</h2>
+                    <p class="short-desc">Lulusan Manajemen Universitas Andalas</p>
+                    <p class="full-desc">Saya menyelesaikan studi di Universitas Andalas dengan jurusan Manajemen. 
+                    Selama kuliah, saya banyak belajar tentang strategi bisnis, keuangan, serta pengembangan organisasi.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box2">
+                    <h2 class="pendidikan2">SMA Negeri 1 Tilatang Kamang</h2>
+                    <p class="short-desc">Lulusan SMA Negeri 1 Tilatang Kamang</p>
+                    <p class="full-desc">Saya menyelesaikan pendidikan menengah atas di SMA Negeri 1 Tilatang Kamang 
+                    dengan fokus pada ilmu sosial. Saya aktif dalam berbagai organisasi dan kegiatan ekstrakurikuler.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+       
+    <section id="experience">
+        <h1>Experience</h1>
+        <p>My work experience...</p>
+    </section>
+    <section id="contact" class="contact">
+        <h1>Contact Me!</h1>
+        <form id="contact-form" action="#">
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="Full Name" id="name" class="item" autocomplete="off">
+                    <div class="error-txt">Full Name Can't be blank</div>
+                </div>
+                <div class="input-field field">
+                    <input type="text" placeholder="Email Address" id="email" class="item" autocomplete="off">
+                    <div class="error-txt email">Email Address Can't be blank</div>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="Phone Number/WA" id="phone" class="item" autocomplete="off">
+                    <div class="error-txt">Phone Number/WA Can't be blank</div>
+                </div>
+                <div class="input-field field">
+                    <input type="text" placeholder="Subject" id="subject" class="item" autocomplete="off">
+                    <div class="error-txt">Subject Can't be blank</div>
+                </div>
+            </div>
+            <div class="textarea-field field">
+                <textarea name="" id="message" class="item" cols="30" rows="10" placeholder="Your Message" autocomplete="off"></textarea>
+                <div class="error-txt email">Email Address Can't be blank</div>
+            </div>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{% static 'js/nav.js' %}"></script>
+    <script src="{% static 'js/scripts.js' %}"></script>
+    <script src="{% static 'js/skills.js' %}"></script>
+    <script src="{% static 'js/education.js' %}"></script>
+    <script src="{% static 'js/contact.js' %}"></script>
+</body>
+</html>

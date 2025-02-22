@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: portfolio
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn portfolio.wsgi:application
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.1
+      - key: WEB_CONCURRENCY
+        value: 4
+      - key: DJANGO_SETTINGS_MODULE
+        value: portfolio.settings
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: DJANGO_DEBUG
+        value: false

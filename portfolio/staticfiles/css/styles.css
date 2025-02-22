@@ -1,0 +1,245 @@
+/* Reset dasar */
+body, h1, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* Styling umum */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Bagian Konten */
+section {
+    padding: 100px 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-margin-top: 70px; /* Offset untuk fixed navbar */
+    text-align: center;
+}
+
+#home {
+    background: #19101f;
+    color: white;
+}
+
+#service {
+    background: #19101f;
+    color: white;
+}
+
+#skills {
+    background: #19101f;
+    color: white;
+}
+
+#education {
+    background: #19101f;
+    color: white;
+}
+
+#experience {
+    background: #19101f;
+    color: white;
+}
+
+
+
+
+/* Header Section */
+section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 18px;
+    max-width: 600px;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    nav ul li a {
+        font-size: 12px;
+    }
+    section h1 {
+        font-size: 28px;
+    }
+    section p {
+        font-size: 16px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Wrapper card untuk posisi awal */
+.wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Menjaga kartu tetap di tengah */
+    transition: transform 0.5s ease-in-out; /* Menambahkan transisi untuk smooth animation */
+}
+/* Kartu bergeser saat berada di section */
+.wrapper.scrolled {
+    transform: translateX(-300px); /* Geser ke kiri 300px, sesuaikan sesuai kebutuhan */
+}
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+/* Posisi awal content (di luar layar, sebelah kiri) */
+.content {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Ketika content muncul (transisi masuk) */
+.content.scrolled {
+    opacity: 1;
+    transform: translateX(0);
+}
+.nama {
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+
+/* Efek berkedip hanya di akhir teks */
+.nama::after {
+    content: "|"; /* Kursor */
+    display: inline-block;
+    animation: blink 0.5s step-end infinite;
+}
+
+/* Animasi untuk mengetik */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Efek berkedip */
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.card {
+    width: 360px;
+    height: 530px;
+    transform-style: preserve-3d;
+    transition: transform .8s ease-in-out;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2),
+    -5px -5px 10px rgba(0, 0, 0,05);
+    border-radius: 15px;
+}
+.card:hover{
+    transform: rotateY(180deg);
+}
+.front-page,
+.back-page{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+}
+.front-page {
+    background-image: url("/static/img/1.jpeg");
+    background-size: cover;
+}
+
+.card-info{
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    color: #fff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.card-title{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.card-subtitle{
+    font-size: 1.2rem;
+    margin-top: 5px;
+    color: #1abc9c;
+}
+.back-page{
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+.card-content{
+    text-align: center;
+    padding: 20px;
+    max-width: 300px;
+}
+.card-content h3{
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.card-description{
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+.card-button{
+    background-color: #3498db;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: all 0.3 ease;
+}
+.card-button:hover{
+    background-color: transparent;
+    color: #3498db;
+    border: 1px solid #3498db;
+}

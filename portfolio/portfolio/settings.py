@@ -82,12 +82,16 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.getenv('DATABASE_URL'),
-        conn_max_age=600,
-        ssl_require=True
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'nama_database',
+        'USER': 'nama_user',
+        'PASSWORD': 'password_database',
+        'HOST': 'localhost',  # Jika database ada di PythonAnywhere
+        'PORT': '',           # Default PostgreSQL port (5432)
+    }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators

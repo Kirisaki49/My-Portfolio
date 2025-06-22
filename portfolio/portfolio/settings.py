@@ -30,6 +30,7 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "fallback-secret-key")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+
 ALLOWED_HOSTS = [
     'kirisaki.pythonanywhere.com',
     'www.kirisaki.pythonanywhere.com',
@@ -131,9 +132,7 @@ STATIC_URL = '/static/'  # Pastikan ada slash di depan
 STATICFILES_DIRS = [BASE_DIR / 'static']  # Folder sumber static files
 STATIC_ROOT = BASE_DIR / 'staticfiles'  # Path lengkap dengan Pathlib
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATICFILES_DIRS = [
-    BASE_DIR / "portfolio" / "static",  # Sesuaikan jika di luar app
-]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
